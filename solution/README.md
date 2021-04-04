@@ -18,7 +18,7 @@ do
  echo "$i", "$RANDOM" >> inputFile
 done
 
-# creates the file inputFile in same directory with permission 644 which is readable by other user
+#creates the file inputFile in same directory with permission 644 which is readable by other user
 
 4:- #docker run -it docker.io/infracloudio/csvserver /bin/bash
 -> copied script inside the container to check the script and create the file (can also use docker cp command to copy the script inside but did it manually)

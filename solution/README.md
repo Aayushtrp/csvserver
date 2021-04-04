@@ -1,4 +1,4 @@
- ####Solutions for part1 ######
+# Solutions for part1 
 1:- Commands executed are below
 #docker run docker.io/infracloudio/csvserver 
 #docker ps 
@@ -21,8 +21,8 @@ done
 # creates the file inputFile in same directory with permission 644 which is readable by other user
 
 4:- #docker run -it docker.io/infracloudio/csvserver /bin/bash
-# copied script inside the container to check the script and create the file (can also use docker cp command to copy the script inside but did it manually)
-# tried starting the application csvserver and it was trying to find file inputdata instead of inputFile
+-> copied script inside the container to check the script and create the file (can also use docker cp command to copy the script inside but did it manually)
+-> tried starting the application csvserver and it was trying to find file inputdata instead of inputFile
 
  2021/04/04 21:57:44 error while reading the file "/csvserver/inputdata": open /csvserver/inputdata: no such file or directory
 ^C
@@ -38,17 +38,17 @@ tcp6       0      0 :::9300                 :::*                    LISTEN      
 
 6:-  docker run -it -p 9393:9300 docker.io/infracloudio/csvserver /bin/bash
 
-# copied script inside the container to check the script and create the file (can also use docker cp command to copy the script inside but did it manually)
-# tried starting the application csvserver and it was trying to find file inputdata instead of inputFile
+#copied script inside the container to check the script and create the file (can also use docker cp command to copy the script inside but did it manually)
+#tried starting the application csvserver and it was trying to find file inputdata instead of inputFile
 
  2021/04/04 21:57:44 error while reading the file "/csvserver/inputdata": open /csvserver/inputdata: no such file or directory
 ^C
 [2]+  Exit 1                  ./csvserver
 
-# added the environment variable 
-# export CSVSERVER_BORDER=orange
-# started the application ./csvserver &
-# tried accessing it via browser
+#added the environment variable
+#export CSVSERVER_BORDER=orange
+#started the application ./csvserver &
+#tried accessing it via browser
 
 #below is text output for web page
 

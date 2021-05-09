@@ -1,0 +1,8 @@
+version: '3.1'
+services:
+  csvserver:
+    image: docker.io/infracloudio/csvserver
+    command: >
+        bash -c "echo '#!/bin/bash' > gencsv.sh &&  echo '>inputdata' >> gencsv.sh && echo 'RANDOM=$$' >> gencsv.sh && echo 'for i in {0..9};do' >> gencsv.sh&& echo 'echo "$$i" , "$$RANDOM" >> inputdata ;done' >> gencsv.sh  &&  sh gencsv.sh && export CSVSERVER_BORDER=orange && ./csvserver"
+    ports:
+      - "9393:9300"

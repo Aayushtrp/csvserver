@@ -1,0 +1,11 @@
+version: '3.1'
+services:
+  csvserver:
+    image: docker.io/infracloudio/csvserver
+    command: >
+        bash -c "sh gencsv.sh && export CSVSERVER_BORDER=orange && ./csvserver"
+    ports:
+      - "9393:9300"
+    volumes:
+      - /root/csvserver/solution/gencsv.sh:/csvserver/gencsv.sh
+
